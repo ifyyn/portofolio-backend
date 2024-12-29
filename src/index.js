@@ -6,6 +6,7 @@ import educationRoute from "./routes/educationRouter.js";
 import organizationalRoute from "./routes/organizationalRouter.js";
 import aboutRoute from "./routes/aboutRouter.js";
 import skilRoute from "./routes/skilRoute.js";
+import authRoute from "./routes/authRouter.js";
 import cors from "cors";
 import morgan from "morgan";
 dotenv.config();
@@ -24,6 +25,7 @@ app.use("/api/v1", educationRoute);
 app.use("/api/v1", organizationalRoute);
 app.use("/api/v1", aboutRoute);
 app.use("/api/v1", skilRoute);
+app.use("/api/v1/auth", authRoute);
 
 // db connected
 dbPortofolio();
